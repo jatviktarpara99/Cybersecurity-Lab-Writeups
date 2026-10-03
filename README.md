@@ -1,7 +1,7 @@
 # Cybersecurity-Lab-Writeups
 Cybersecurity Home Lab & Penetration Testing Write-Up
 
-🛡️ Project Overview
+#  Project Overview
 This repository documents the creation and execution of a localized, isolated cybersecurity home lab. The objective of this project was to safely practice offensive security methodologies (Red Teaming) while observing and understanding system defenses (Blue Teaming).
 
 Lab Environment:
@@ -13,12 +13,12 @@ Network: VMware/VirtualBox Host-Only Virtual Network (Air-gapped)
 <img width="985" height="738" alt="Screenshot 2026-08-14 230440" src="https://github.com/user-attachments/assets/03b72aaa-90d6-4b1c-9028-4a9bcd816d6b" />
 
 
-🌐 Phase 1: Web Application Testing
+#  Phase 1: Web Application Testing
 The initial phase focused on exploiting common web application vulnerabilities using DVWA.
 Command Injection: Successfully injected arbitrary system commands into a web application input field, allowing for direct communication with the underlying Linux operating system.
 SQL Injection (SQLi): Exploited a vulnerable database query by injecting boolean logic (' OR '1'='1) into a user ID field. This bypassed the application's authentication logic and successfully dumped all registered user credentials from the backend database.
 
-🔍 Phase 2: Network Reconnaissance
+#  Phase 2: Network Reconnaissance
 Transitioning to the corporate Windows target, I utilized nmap to map the attack surface and identify potential entry points.
 Scan Executed: nmap -sV -O [Target IP]
 Findings:
@@ -48,7 +48,7 @@ Post-Exploitation: The payload successfully connected back to the Metasploit exp
 
 <img width="1009" height="142" alt="image" src="https://github.com/user-attachments/assets/830143df-5ac8-4a75-b682-035598606449" />
 
-🛠️ Post-Exploitation & Lessons Learned
+#  Post-Exploitation & Lessons Learned
 Once initial access was achieved, I utilized Meterpreter to interact with the system (sysinfo, dropping into a native Windows shell, and capturing desktop screenshots).
 Key Takeaways:
 Defense in Depth works: Turning off Windows Defender Antivirus was not enough to guarantee a successful attack; Account Lockout policies and SmartScreen provided vital secondary layers of defense.
